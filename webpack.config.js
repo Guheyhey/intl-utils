@@ -10,7 +10,7 @@ const uglifyOptions = {
 module.exports = {
   entry: './test/index.js',
   output: {
-    filename: 'Bundle.js',
+    filename: 'test-bundle.js',
     path: path.resolve(__dirname, 'dist'),
     libraryTarget: 'umd'
   },

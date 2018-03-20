@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "",
     "build": "webpack --mode production",
+    "test": "npm run build && open ./test/formatDateText/index.html & open ./test/formatPriceText/index.html",
     "eslint": "eslint ./src/*.js --fix"
   },
   "repository": {
