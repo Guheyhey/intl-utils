@@ -8,9 +8,9 @@ const uglifyOptions = {
 }
 
 module.exports = {
-  entry: './src/formatDateText.js',
+  entry: './test/index.js',
   output: {
-    filename: 'formatDateText.js',
+    filename: 'Bundle.js',
     path: path.resolve(__dirname, 'dist'),
     libraryTarget: 'umd'
   },

@@ -8,7 +8,7 @@
     - [Intl](https://nodejs.org/api/intl.html)
   - The interface is tested, not the locale
 */
-const formatTextDateScenerio = [
+const formatDateTextScenerio = [
   {
     date: 'March 12, 2012',
     locale: 'en-US',
@@ -115,9 +115,9 @@ const formatTextDateScenerio = [
   },
 ]
 
-formatTextDateScenerio.forEach(function testScenario (scenario) {
+formatDateTextScenerio.forEach(function testScenario (scenario) {
   QUnit.test(`test ${scenario.name}`, (assert) => {
     const result = formatDateText(scenario.date, scenario.locale, { opts: scenario.props.opts, showOrdinal: scenario.props.showOrdinal })
-    assert.ok(result === scenario.expected, 'passed')
+    assert.equal(result, scenario.expected, `result: ${result}, expect: ${scenario.expected}`)
   })
 })

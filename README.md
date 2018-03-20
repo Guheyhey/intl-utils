@@ -25,5 +25,16 @@ formatDateText() // March 12, 2012
 formateDateTest(date, 'en-US', {true, {month: 'long'}}) // 
 
 ```
+---
+
+<h2 id="tests">Tests</h2>
+
+Build the project first
+
+```bash
+npm run build
+```
+
+Open the `.html` files in browser under `src/test/formatDateText` and `src/test/formatPriceText` folders.
 
 

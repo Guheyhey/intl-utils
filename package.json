@@ -6,7 +6,7 @@
   "scripts": {
     "test": "",
     "build": "webpack --mode production",
-    "eslint": "eslint ./src/formatDateText.js --fix"
+    "eslint": "eslint ./src/*.js --fix"
   },
   "repository": {
     "type": "git",

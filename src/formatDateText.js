@@ -1,4 +1,4 @@
-const ordinal = require('ordinal')
+import ordinal from 'ordinal'
 
 /*
   # formatDatetext 📅
@@ -41,7 +41,7 @@ const ordinal = require('ordinal')
     - example output: 12 Mar., 2012
 */
 
-function formatDateText (
+export default function formatDateText (
   date,
   locale = 'en-US',
   props = {
@@ -54,8 +54,8 @@ function formatDateText (
     opts,
   } = props
   const browserSupportsIntl = typeof Intl !== 'undefined'
+  console.log(browserSupportsIntl)
   const formattedDate = new Date(date)
-  console.log('test')
   if (
     browserSupportsIntl &&
     locale === 'en-US' &&
@@ -72,6 +72,6 @@ function formatDateText (
     : date
 }
 
-export default function() {
-  window.formatDateText
-}
+// export default function() {
+//   window.formatDateText
+// }
