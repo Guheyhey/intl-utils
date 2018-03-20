@@ -1,0 +1,17 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["dollarshaveclub"],
+  "globals": {
+    "document": true,
+    "expect": true,
+    "window": true,
+    "XMLHttpRequest": true
+  },
+  "rules": {
+    "indent": 2,
+    "no-console": [
+      "error", { "allow": ["log", "warn", "error"] }
+    ],
+    "semi": [2, "never"]
+  }
+}

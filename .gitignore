@@ -1,0 +1,17 @@
+package-lock.json
+package-lock.json.*
+build/
+dist/
+coverage/
+coverage_*/
+iteration-dist/
+node_modules/
+*.log
+*.log.*
+
+.DS_Store
+.sass-cache
+.eslintcache
+.vagrant
+.nyc_output
+lcov.dats
