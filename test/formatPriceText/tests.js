@@ -42,7 +42,7 @@ const formatPriceTextScenario = [
     name: 'test DE with currency',
     price: 123456.789,
     opts: { style: 'currency', currency: 'EUR' },
-    expected: '123.456,79 €',
+    expected: '123.456,79 €',
   },
   {
     locale: 'jp-JP',
