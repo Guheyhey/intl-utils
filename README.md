@@ -34,10 +34,9 @@ npm install
 **To format Date**
 ```javascript
 import formatDateText from 'intl-utils'
-const formatDateText = IntlUtils.formatDateText
 
 formatDateText() // March 12, 2012
-formatDateText(date, 'en-US', {true, {month: 'long'}}) // 
+formatDateText( date, 'en-US', {true, {month: 'long'}} ) // 
 
 ```
 ### formatPriceText Arguments 🔬
@@ -54,11 +53,10 @@ formatDateText(date, 'en-US', {true, {month: 'long'}}) //
 **To format Prie**
 ```javascript
 import formatPriceText from 'intl-utils'
-const formatPriceText = IntlUtils.formatPriceText
 
-formatPriceText( 123, 'en-US', { style: 'currency', currency: 'USD' }) // $123
+formatPriceText( 123, 'en-US', { style: 'currency', currency: 'USD' } ) // $123
 formatPriceText( 123456.789, 'de-DE', { style: 'currency', currency: 'EUR' } ) // 123.456,79 €
-formatPriceText( 1234567.888, 'zh-CN', { style: 'currency', currency: 'CNY' }) // ￥1,234,567.89
+formatPriceText( 1234567.888, 'zh-CN', { style: 'currency', currency: 'CNY' } ) // ￥1,234,567.89
 
 ```
 ---
