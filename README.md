@@ -26,13 +26,14 @@ npm install
   - showOrdinal: bool, true or false
     - example: false = 2, 19, true = 2nd, 19th
   - opts: {object}
-    - example: formateDateTest(date, 'en-US', { props, {month: 'short', day: 'numeric'}). For more options, please check <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat">options</a>
+    - example: formateDateTest(date, 'en-US', { props, {month: 'short', day: 'numeric'}). 
+    - For more options, please check <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat">date options</a>
   - Where are the defensive checks?
     - If needed, they'll be added! 🤞
 
 **To format Date**
 ```javascript
-const IntlUtils = require('intl-utils')
+import formatDateText from 'intl-utils'
 const formatDateText = IntlUtils.formatDateText
 
 formatDateText() // March 12, 2012
@@ -48,10 +49,11 @@ formatDateText(date, 'en-US', {true, {month: 'long'}}) //
   - opts
     - price options
     - example: { style: 'currency', currency: 'EUR' }
+    - more options please check <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat#Parameters"> number options</a>
 
 **To format Prie**
 ```javascript
-const IntlUtils = require('intl-utils')
+import formatPriceText from 'intl-utils'
 const formatPriceText = IntlUtils.formatPriceText
 
 formatPriceText( 123, 'en-US', { style: 'currency', currency: 'USD' }) // $123
@@ -63,12 +65,14 @@ formatPriceText( 1234567.888, 'zh-CN', { style: 'currency', currency: 'CNY' }) /
 
 <h2 id="tests">Tests</h2>
 
-Build the project first
+Run test script
 
 ```bash
-npm run build
+npm run test
 ```
 
-Open the `.html` files in browser under `src/test/formatDateText` and `src/test/formatPriceText` folders.
+
+
+
 
 
