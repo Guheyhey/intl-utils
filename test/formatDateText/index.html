@@ -5,13 +5,17 @@
   <meta name="viewport" content="width=device-width">
   <title>QUnit Example</title>
   <link rel="stylesheet" href="../../node_modules/qunit/qunit/qunit.css">
-  
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Intl.~locale.en"></script>
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Intl.~locale.es"></script>
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Intl.~locale.de"></script>
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Intl.~locale.jp"></script>
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Intl.~locale.zh"></script>
 </head>
 <body>
   <div id="qunit"></div>
   <div id="qunit-fixture"></div>
   <script src="../../node_modules/qunit/qunit/qunit.js"></script>
-  <script src="../../dist/test-bundle.js"></script>
+  <script src="../../dist/formatDateText.js"></script>
   <script src="tests.js"></script>
 </body>
 </html>
