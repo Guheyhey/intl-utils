@@ -74,7 +74,7 @@ const formatDateTextScenerio = [
     expected: 'March 20, 17',
   },
   {
-    date:'Apr 1, 2018',
+    date: 'Apr 1, 2018',
     locale: 'zh-CN',
     name: 'test CN no defaults',
     props: {
@@ -84,7 +84,7 @@ const formatDateTextScenerio = [
     expected: '2018/4/1',
   },
   {
-    date:'Apr 1, 2018',
+    date: 'Apr 1, 2018',
     locale: 'de-DE',
     name: 'test DE no defaults',
     props: {
@@ -94,7 +94,7 @@ const formatDateTextScenerio = [
     expected: '1.4.2018',
   },
   {
-    date:'Apr 1, 2018',
+    date: 'Apr 1, 2018',
     locale: 'es-ES',
     name: 'test ES no defaults',
     props: {
@@ -104,7 +104,7 @@ const formatDateTextScenerio = [
     expected: '1/4/2018',
   },
   {
-    date:'Apr 1, 2018',
+    date: 'Apr 1, 2018',
     locale: 'fr-FR',
     name: 'test FR no defaults',
     props: {
@@ -116,8 +116,15 @@ const formatDateTextScenerio = [
 ]
 
 formatDateTextScenerio.forEach(function testScenario (scenario) {
-  QUnit.test(`test ${scenario.name}`, (assert) => {
+  QUnit.test(scenario.name, function (assert) {
     const result = formatDateText(scenario.date, scenario.locale, { opts: scenario.props.opts, showOrdinal: scenario.props.showOrdinal })
-    assert.equal(result, scenario.expected, `result: ${result}, expect: ${scenario.expected}`)
+    assert.equal(result, scenario.expected, "result: " + result + ", expect: " + scenario.expected)
   })
 })
+
+// formatDateTextScenerio.forEach(function testScenario (scenario) {
+//   QUnit.test(`test ${scenario.name}`, (assert) => {
+//     const result = formatDateText(scenario.date, scenario.locale, { opts: scenario.props.opts, showOrdinal: scenario.props.showOrdinal })
+//     assert.equal(result, scenario.expected, `result: ${result}, expect: ${scenario.expected}`)
+//   })
+// })

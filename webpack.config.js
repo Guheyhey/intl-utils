@@ -1,5 +1,5 @@
-const path = require('path');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const path = require('path')
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
 const uglifyOptions = {
   output: {
@@ -12,11 +12,11 @@ module.exports = {
   output: {
     filename: 'test-bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
   },
   plugins: [
     new UglifyJSPlugin({
       uglifyOptions,
     }),
   ],
-};
+}

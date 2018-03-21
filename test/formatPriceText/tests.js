@@ -67,10 +67,18 @@ const formatPriceTextScenario = [
   },
 ]
 
+// formatPriceTextScenario.forEach(function testScenario (scenario) {
+//   QUnit.test(`test ${scenario.name}`, (assert) => {
+//     const result = formatPriceText(scenario.price, scenario.locale, scenario.opts)
+//     assert.equal(result, scenario.expected, `result: ${result}, expect: ${scenario.expected}`)
+//   })
+// })
+
+
 formatPriceTextScenario.forEach(function testScenario (scenario) {
-  QUnit.test(`test ${scenario.name}`, (assert) => {
+  QUnit.test(scenario.name, function (assert) {
     const result = formatPriceText(scenario.price, scenario.locale, scenario.opts)
-    assert.equal(result, scenario.expected, `result: ${result}, expect: ${scenario.expected}`)
+    assert.equal(result, scenario.expected, "result: " + result + ", expect: " + scenario.expected)
   })
 })
 

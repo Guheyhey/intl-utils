@@ -1,14 +1,13 @@
 {
   "presets": [
-    "stage-2",
-    ["env", {
+    ["@babel/preset-env", {
+      "loose": true,
       "targets": {
-        "browsers": ["last 2 versions", "safari >= 7", "ie >= 11"]
-      },
-      "modules": "commonjs"
+        "browsers": [
+          "defaults",
+          "ie >= 9"
+        ]
+      }
     }]
-  ],
-  "plugins": [
-    "transform-runtime"
   ]
 }
