@@ -13,35 +13,16 @@ const formatDateTextScenerio = [
     date: 'March 12, 2012',
     locale: 'en-US',
     name: 'test US no defaults',
-    props: {
-      opts: {},
-      showOrdinal: false,
-    },
+    opts: {},
     expected: '3/12/2012',
   },
   {
     date: 'March 20, 2017',
     locale: 'en-US',
     name: 'test US w/ ordinal',
-    props: {
-      opts: {
-        month: 'short',
-        day: 'numeric',
-      },
-      showOrdinal: true,
-    },
-    expected: 'Mar 20th',
-  },
-  {
-    date: 'March 20, 2017',
-    locale: 'en-US',
-    name: 'test US regular',
-    props: {
-      opts: {
-        month: 'short',
-        day: 'numeric',
-      },
-      showOrdinal: false,
+    opts: {
+      month: 'short',
+      day: 'numeric',
     },
     expected: 'Mar 20',
   },
@@ -49,13 +30,20 @@ const formatDateTextScenerio = [
     date: 'March 20, 2017',
     locale: 'en-US',
     name: 'test US regular',
-    props: {
-      opts: {
-        month: 'long',
-        day: 'numeric',
-        year: 'numeric',
-      },
-      showOrdinal: false,
+    opts: {
+      month: 'short',
+      day: 'numeric',
+    },
+    expected: 'Mar 20',
+  },
+  {
+    date: 'March 20, 2017',
+    locale: 'en-US',
+    name: 'test US regular',
+    opts: {
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric',
     },
     expected: 'March 20, 2017',
   },
@@ -63,13 +51,10 @@ const formatDateTextScenerio = [
     date: 'March 20, 2017',
     locale: 'en-US',
     name: 'test US regular',
-    props: {
-      opts: {
-        month: 'long',
-        day: 'numeric',
-        year: '2-digit',
-      },
-      showOrdinal: false,
+    opts: {
+      month: 'long',
+      day: 'numeric',
+      year: '2-digit',
     },
     expected: 'March 20, 17',
   },
@@ -77,47 +62,35 @@ const formatDateTextScenerio = [
     date: 'Apr 1, 2018',
     locale: 'zh-CN',
     name: 'test CN no defaults',
-    props: {
-      opts: {},
-      showOrdinal: false,
-    },
+    opts: {},
     expected: '2018/4/1',
   },
   {
     date: 'Apr 1, 2018',
     locale: 'de-DE',
     name: 'test DE no defaults',
-    props: {
-      opts: {},
-      showOrdinal: false,
-    },
+    opts: {},
     expected: '1.4.2018',
   },
   {
     date: 'Apr 1, 2018',
     locale: 'es-ES',
     name: 'test ES no defaults',
-    props: {
-      opts: {},
-      showOrdinal: false,
-    },
+    opts: {},
     expected: '1/4/2018',
   },
   {
     date: 'Apr 1, 2018',
     locale: 'fr-FR',
     name: 'test FR no defaults',
-    props: {
-      opts: {},
-      showOrdinal: false,
-    },
+    opts: {},
     expected: '01/04/2018',
   },
 ]
 
 formatDateTextScenerio.forEach(function testScenario (scenario) {
   QUnit.test(scenario.name, function (assert) {
-    const result = formatDateText(scenario.date, scenario.locale, { opts: scenario.props.opts, showOrdinal: scenario.props.showOrdinal })
+    const result = formatDateText(scenario.date, scenario.locale, scenario.opts)
     assert.equal(result, scenario.expected, "result: " + result + ", expect: " + scenario.expected)
   })
 })
