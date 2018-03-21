@@ -1,5 +1,3 @@
-import ordinal from 'ordinal'
-
 /*
   # formatDatetext 📅
   ----
@@ -44,34 +42,12 @@ import ordinal from 'ordinal'
 export default function formatDateText (
   date,
   locale = 'en-US',
-  props = {
-    opts: {},
-    showOrdinal: false,
-  },
+  opts = {},
 ) {
-  const {
-    showOrdinal,
-    opts,
-  } = props
   const browserSupportsIntl = typeof Intl !== 'undefined'
   console.log(browserSupportsIntl)
   const formattedDate = new Date(date)
-  if (
-    browserSupportsIntl &&
-    locale === 'en-US' &&
-    showOrdinal === true
-  ) {
-    const monthOptions = opts.month ? { month: opts.month } : { month: 'short' }
-    const monthFormat = new Intl.DateTimeFormat(locale, monthOptions).format(formattedDate)
-    const day = parseInt(new Intl.DateTimeFormat(locale, {day: 'numeric'}).format(formattedDate))
-    const dayOrdinal = ordinal(day)
-    return `${monthFormat} ${dayOrdinal}`
-  }
   return browserSupportsIntl
     ? new Intl.DateTimeFormat(locale, opts).format(formattedDate)
     : date
 }
-
-// export default function() {
-//   window.formatDateText
-// }
