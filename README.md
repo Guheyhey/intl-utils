@@ -2,7 +2,11 @@
 <h5 align="center">JS Intl utilities to format price and date for different regions.</h5>
 <h5 align="center">For more information about Intl, please check <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl">Intl</a></h5>
 
+---
 
+<h2 id="notice">Notice</h2>
+
+<h5>Node version < 9.8 would not fully support Intl. The commented test cases could only pass in browser.</h1>
 ---
 
 <h2 id="usage">Using Intl Utils</h2>
@@ -33,7 +37,7 @@ npm install
 
 **To format Date**
 ```javascript
-import formatDateText from 'intl-utils'
+import formatDateText from 'intl-utils/src/formatDateText'
 
 formatDateText() // March 12, 2012
 formatDateText( date, 'en-US', {true, {month: 'long'}} ) // 
@@ -52,7 +56,7 @@ formatDateText( date, 'en-US', {true, {month: 'long'}} ) //
 
 **To format Prie**
 ```javascript
-import formatPriceText from 'intl-utils'
+import formatPriceText from 'intl-utils/src/formatPriceText'
 
 formatPriceText( 123, 'en-US', { style: 'currency', currency: 'USD' } ) // $123
 formatPriceText( 123456.789, 'de-DE', { style: 'currency', currency: 'EUR' } ) // 123.456,79 €
