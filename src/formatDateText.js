@@ -45,7 +45,6 @@ export default function formatDateText (
   opts = {},
 ) {
   const browserSupportsIntl = typeof Intl !== 'undefined'
-  console.log(browserSupportsIntl)
   const formattedDate = new Date(date)
   return browserSupportsIntl
     ? new Intl.DateTimeFormat(locale, opts).format(formattedDate)
