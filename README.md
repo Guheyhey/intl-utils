@@ -1,3 +1,6 @@
+﻿> [!WARNING]
+> This repository is deprecated and archived. It is kept for historical reference only.
+
 <h1 align="center">JS Intl Utils</h1>
 <h5 align="center">JS Intl utilities to format price and date for different regions.</h5>
 <h5 align="center">For more information about Intl, please check <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl">Intl</a></h5>
@@ -72,6 +75,7 @@ Run test script
 ```bash
 npm run test
 ```
+
 
 
 
